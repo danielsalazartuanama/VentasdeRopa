@@ -1,0 +1,76 @@
+﻿@model IEnumerable<VASTQuickShoping.Models.DTO.ProductDTO>
+
+@{
+    ViewBag.Title = "Product";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-sm-4">
+        <a class="btn btn-danger form-control" href="~/admin/product/insertar">Nuevo</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table table-stripe table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th style="width:30%;">NOMBRE</th>
+                    <th style="width:10%;">SKU</th>
+                    <th style="width:10%;">DESCRIPCION</th>
+                    <th style="width:10%;">DESCUENTO</th>
+                    <th style="width:10%;">STOCK</th>
+                    <th style="width:10%;">MARCA</th>
+                    <th style="width:10%;">CATEGORIA</th>
+                    <th style="width:10%;"></th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)//item es un objeto por eso lo pongo @item categoria
+                {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.SKU</td>
+                    <td>@item.Description</td>
+                    <td>@(item.Discount*100)</td>
+                    <td>@item.Stock</td>
+                    <td>@item.Brand</td>
+                    <td>@item.Category</td>
+                    <td>
+                        <a href="~/admin/product/modificar/@item.ProductID" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true">Editar</span></a>
+                        <a href="~/admin/product/eliminar/@item.ProductID" class="btn btn-sm btn-success" onclick="return confirm('¿Estas seguro de eliminar este registro?')">Eliminar</a>
+                    </td>
+
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-9">
+        <!--Paginacion de datos-->
+    </div>
+    <div class="col-sm-3">
+        <div class="row">
+            <label for="dropdownMenuLink" class="control-label">Estado</label>
+        </div>
+        <div class="col-sm-4">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @(ViewBag.state == true ? "Activo":"Inactivo")
+                    
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="~/admin/product/index?state=true">Activo</a></li>
+                    <li><a class="dropdown-item" href="~/admin/product/index?state=false">Inactivo</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

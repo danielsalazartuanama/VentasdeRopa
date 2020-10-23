@@ -1,0 +1,112 @@
+﻿@model VASTQuickShoping.Models.Domain.Product
+@{
+    ViewBag.Title = "Formulario";
+}
+
+<h2>Producto - Detalle</h2>
+@using (Html.BeginForm((String)ViewBag.op, "Product", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    if (Model != null)
+    {
+        @Html.HiddenFor(model => model.ProductID)
+    }
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="Name" class="control-label">Nombre: </label>
+                @Html.TextBoxFor(model => model.Name, new { @class="form-control"})
+                @Html.ValidationMessageFor(model => model.Name, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="CategoryID" class="control-label">Categoría: </label>
+                @Html.DropDownListFor(model => model.CategoryID, (IEnumerable<SelectListItem>)ViewBag.categ, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CategoryID, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="BrandID" class="control-label">Marca: </label>
+                @Html.DropDownListFor(model => model.BrandID, (IEnumerable<SelectListItem>)ViewBag.bran, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BrandID, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="SKU" class="control-label">SKU: </label>
+                @Html.TextBoxFor(model => model.SKU, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SKU, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="CostPrice" class="control-label">P. Costo: </label>
+                @Html.TextBoxFor(model => model.CostPrice, new { @class = "form-control",type="number",step="0.1" })
+                @Html.ValidationMessageFor(model => model.CostPrice,null, new { @class = "badge badge-danger"})
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="SalePrice" class="control-label">P. Venta: </label>
+                @Html.TextBoxFor(model => model.SalePrice, new { @class = "form-control", type = "number", step = "0.1" })
+                @Html.ValidationMessageFor(model => model.SalePrice, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="Discount" class="control-label">Descuento: </label>
+                @Html.TextBoxFor(model => model.Discount, new { @class = "form-control", type = "number", step = "0.1" })
+                @Html.ValidationMessageFor(model => model.Discount, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="Stock" class="control-label">Stock: </label>
+                @Html.TextBoxFor(model => model.Stock, new { @class = "form-control", type = "number", step = "1" })
+                @Html.ValidationMessageFor(model => model.Stock, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="StockMin" class="control-label">Stock Mínimo: </label>
+                @Html.TextBoxFor(model => model.StockMin, new { @class = "form-control", type = "number", step = "1" })
+                @Html.ValidationMessageFor(model => model.StockMin, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="State" class="control-label">Activo: </label>
+                @Html.CheckBoxFor(model => model.State, new { @class = "form-control"})
+                @Html.ValidationMessageFor(model => model.State, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="Description" class="control-label">Descripción: </label>
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Description, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+    </div>
+
+
+    <br />
+    <div class="row">
+        <div class="col-sm-8">
+            <button type="submit" class="btn btn-primary form-control">Guardar</button>
+        </div>
+        <div class="col-sm-4">
+            <button type="button" class="btn btn-danger form-control" data-dismiss="modal">Cancelar</button>
+        </div>
+    </div>
+}
