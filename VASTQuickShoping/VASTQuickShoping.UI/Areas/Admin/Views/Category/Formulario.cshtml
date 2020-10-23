@@ -1,0 +1,46 @@
+﻿@model VASTQuickShoping.Models.Domain.Category
+@{
+    ViewBag.Title = "Formulario";
+}
+
+@using (Html.BeginForm((string)ViewBag.op, "Category", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    if (Model != null)
+    {
+        @Html.HiddenFor(model => model.CategoryID)@*vinculando a los modelos de datos con hiddenfor*@
+    }
+
+    //expresion landa  ESTAMOS CON UN FORMULARIO PARA LLENAR EL DATOS=>
+    //validacion en name
+    <div class="row">
+        <div class="form-group col-sm-12">
+            <label class="control-label">NOMBRE</label>
+            @Html.TextBoxFor(Model => Model.Name, new { @class="form-control" })
+        <div class="text-danger">
+            @Html.ValidationMessageFor(Model => Model.Name)
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-sm-8">
+            <label class="control-label">DESCRIPCION</label>
+            @Html.TextAreaFor(Model => Model.Descripcion, new { @class = "form-control" })
+            @Html.ValidationMessageFor(Model=>Model.Descripcion)
+        </div>
+        <div class="form-group col-sm-4">
+            <label class="control-label">ESTADO</label>
+            @Html.CheckBoxFor(Model => Model.State, new { @class = "form-control" })
+            @Html.ValidationMessageFor(Model => Model.State)
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <button type="submit" class="btn btn-primary form-control">Guardar</button>
+            <a href="#" class="btn btn-success form-control">Cancelar</a>
+        </div>
+    </div>
+}
+
