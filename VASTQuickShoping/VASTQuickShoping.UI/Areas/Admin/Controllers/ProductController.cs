@@ -31,6 +31,8 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
         public ActionResult Insertar(Product obj)
         {
             obj.Fecha = DateTime.Now.Date;
+            ViewBag.categ = new SelectList(new CategoryManager().GetAllSimple(), "CategoryID", "Name");
+            ViewBag.bran = new SelectList(new BrandManager().GetAllSimple(), "BrandID", "Name");
 
             if (ModelState.IsValid)
             {
@@ -41,6 +43,7 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
             {
                 return View("Formulario", obj);
             }
+            
         }
 
         [HttpGet]
