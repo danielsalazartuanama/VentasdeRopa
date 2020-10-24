@@ -57,12 +57,15 @@
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="Domain\Category.cs" />
     <Compile Include="Domain\Brand.cs" />
+    <Compile Include="Domain\Department.cs" />
     <Compile Include="Domain\Product.cs" />
+    <Compile Include="Domain\Provider.cs" />
+    <Compile Include="Domain\Size.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="Identity\ApplicationUser.cs" />
-    <Compile Include="Migrations\202010221759508_Start.cs" />
-    <Compile Include="Migrations\202010221759508_Start.Designer.cs">
-      <DependentUpon>202010221759508_Start.cs</DependentUpon>
+    <Compile Include="Migrations\202010240434584_Todo.cs" />
+    <Compile Include="Migrations\202010240434584_Todo.Designer.cs">
+      <DependentUpon>202010240434584_Todo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +75,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010221759508_Start.resx">
-      <DependentUpon>202010221759508_Start.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010240434584_Todo.resx">
+      <DependentUpon>202010240434584_Todo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

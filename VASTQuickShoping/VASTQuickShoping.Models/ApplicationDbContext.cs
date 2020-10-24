@@ -15,6 +15,7 @@ namespace VASTQuickShoping.Models
         public ApplicationDbContext()
             : base("name=miCadena", throwIfV1Schema: false)
         {
+            
             Database.SetInitializer(
                 new MigrateDatabaseToLatestVersion<ApplicationDbContext, Migrations.Configuration>("miCadena"));
 
@@ -22,7 +23,10 @@ namespace VASTQuickShoping.Models
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Brand> Brands { get; set; }
-        
+        public virtual DbSet<Size> Sizes { get; set; }
+        public virtual DbSet<Provider> Providers { get; set; }
+        public virtual DbSet<Department> Departments { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

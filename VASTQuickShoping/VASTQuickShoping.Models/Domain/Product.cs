@@ -18,6 +18,16 @@ namespace VASTQuickShoping.Models.Domain
         [ForeignKey("Brand")]
         public int BrandID { get; set; }
 
+        [ForeignKey("Size")]
+        public int SizeID { get; set; }
+
+        [ForeignKey("Department")]
+        public int DepartmentID { get; set; }
+
+        [ForeignKey("Provider")]
+        public int ProviderID { get; set; }
+
+
         [Required]
         [StringLength(200)]
         public string Name { get; set; }
@@ -44,5 +54,12 @@ namespace VASTQuickShoping.Models.Domain
         //Propiedades de navegación
         public virtual Brand Brand { get; set; }
         public virtual Category Category { get; set; }
+
+        public virtual Size Size { get; set; }
+
+        public virtual Department Department { get; set; }
+
+        public virtual Provider Provider { get; set; }
+
     }
 }

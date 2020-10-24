@@ -3,7 +3,7 @@ namespace VASTQuickShoping.Models.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Start : DbMigration
+    public partial class Todo : DbMigration
     {
         public override void Up()
         {
@@ -24,6 +24,9 @@ namespace VASTQuickShoping.Models.Migrations
                         ProductID = c.Int(nullable: false, identity: true),
                         CategoryID = c.Int(nullable: false),
                         BrandID = c.Int(nullable: false),
+                        SizeID = c.Int(nullable: false),
+                        DepartmentID = c.Int(nullable: false),
+                        ProviderID = c.Int(nullable: false),
                         Name = c.String(nullable: false, maxLength: 200),
                         SKU = c.String(maxLength: 20),
                         Description = c.String(nullable: false),
@@ -38,8 +41,14 @@ namespace VASTQuickShoping.Models.Migrations
                 .PrimaryKey(t => t.ProductID)
                 .ForeignKey("dbo.Brands", t => t.BrandID, cascadeDelete: true)
                 .ForeignKey("dbo.Categories", t => t.CategoryID, cascadeDelete: true)
+                .ForeignKey("dbo.Departments", t => t.DepartmentID, cascadeDelete: true)
+                .ForeignKey("dbo.Providers", t => t.ProviderID, cascadeDelete: true)
+                .ForeignKey("dbo.Sizes", t => t.SizeID, cascadeDelete: true)
                 .Index(t => t.CategoryID)
-                .Index(t => t.BrandID);
+                .Index(t => t.BrandID)
+                .Index(t => t.SizeID)
+                .Index(t => t.DepartmentID)
+                .Index(t => t.ProviderID);
             
             CreateTable(
                 "dbo.Categories",
@@ -51,6 +60,37 @@ namespace VASTQuickShoping.Models.Migrations
                         State = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.CategoryID);
+            
+            CreateTable(
+                "dbo.Departments",
+                c => new
+                    {
+                        DepartmentID = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 50),
+                        State = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.DepartmentID);
+            
+            CreateTable(
+                "dbo.Providers",
+                c => new
+                    {
+                        ProviderID = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 50),
+                        Phone = c.Int(nullable: false),
+                        State = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.ProviderID);
+            
+            CreateTable(
+                "dbo.Sizes",
+                c => new
+                    {
+                        SizeID = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 20),
+                        State = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.SizeID);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -128,6 +168,9 @@ namespace VASTQuickShoping.Models.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
+            DropForeignKey("dbo.Products", "SizeID", "dbo.Sizes");
+            DropForeignKey("dbo.Products", "ProviderID", "dbo.Providers");
+            DropForeignKey("dbo.Products", "DepartmentID", "dbo.Departments");
             DropForeignKey("dbo.Products", "CategoryID", "dbo.Categories");
             DropForeignKey("dbo.Products", "BrandID", "dbo.Brands");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
@@ -136,6 +179,9 @@ namespace VASTQuickShoping.Models.Migrations
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            DropIndex("dbo.Products", new[] { "ProviderID" });
+            DropIndex("dbo.Products", new[] { "DepartmentID" });
+            DropIndex("dbo.Products", new[] { "SizeID" });
             DropIndex("dbo.Products", new[] { "BrandID" });
             DropIndex("dbo.Products", new[] { "CategoryID" });
             DropTable("dbo.AspNetUserLogins");
@@ -143,6 +189,9 @@ namespace VASTQuickShoping.Models.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.Sizes");
+            DropTable("dbo.Providers");
+            DropTable("dbo.Departments");
             DropTable("dbo.Categories");
             DropTable("dbo.Products");
             DropTable("dbo.Brands");
