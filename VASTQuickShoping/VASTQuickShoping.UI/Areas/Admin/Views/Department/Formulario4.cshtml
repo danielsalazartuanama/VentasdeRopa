@@ -1,0 +1,46 @@
+﻿@model VASTQuickShoping.Models.Domain.Department
+@{
+    ViewBag.Title = "Formulario4";
+}
+
+<h2>Formulario4</h2>
+
+
+@using (Html.BeginForm((string)ViewBag.op, "Department", FormMethod.Post))
+{
+
+    @Html.AntiForgeryToken()
+
+    if (Model != null)
+    {
+        @Html.HiddenFor(x => x.DepartmentID)
+    }
+
+
+    <div class="row">
+        <div class="form-group col-sm-12">
+            <label class="control-label">NOMBRE</label>
+            @Html.TextBoxFor(Model => Model.Name, new { @class = "form-control" })
+            <div class="text-danger">
+                @Html.ValidationMessageFor(Model => Model.Name)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="form-group col-sm-4">
+            <label class="control-label">ESTADO</label>
+            @Html.CheckBoxFor(Model => Model.State, new { @class = "form-control" })
+            @Html.ValidationMessageFor(Model => Model.State)
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <button type="submit" class="btn btn-primary form-control">Guardar</button>
+            <a href="#" class="btn btn-success form-control">Cancelar</a>
+        </div>
+    </div>
+
+}
+
