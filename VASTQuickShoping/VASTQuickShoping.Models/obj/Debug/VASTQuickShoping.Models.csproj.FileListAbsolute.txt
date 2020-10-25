@@ -92,8 +92,8 @@ C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.M
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.Models\obj\Debug\VASTQuickShoping.Models.csproj.CopyComplete
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.Models\obj\Debug\VASTQuickShoping.Models.dll
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.Models\obj\Debug\VASTQuickShoping.Models.pdb
-C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.Models\obj\Debug\VASTQuickShoping.Models.Migrations.Start.resources
-C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.Models\obj\Debug\VASTQuickShoping.Models.csproj.GenerateResource.cache
 C:\Users\jhony\OneDrive\Documentos\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.Models\obj\Debug\VASTQuickShoping.Models.csprojAssemblyReference.cache
 C:\Users\jhony\OneDrive\Documentos\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.Models\obj\Debug\VASTQuickShoping.Models.Migrations.Start.resources
 C:\Users\jhony\OneDrive\Documentos\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.Models\obj\Debug\VASTQuickShoping.Models.csproj.GenerateResource.cache
+C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.Models\obj\Debug\VASTQuickShoping.Models.Migrations.Start.resources
+C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.Models\obj\Debug\VASTQuickShoping.Models.csproj.GenerateResource.cache

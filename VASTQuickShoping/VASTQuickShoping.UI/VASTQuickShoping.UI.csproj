@@ -172,6 +172,7 @@
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProviderController.cs" />
     <Compile Include="Areas\Admin\Controllers\SizeController.cs" />
     <Compile Include="Common\MisConstantes.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -356,6 +357,8 @@
     <Content Include="Areas\Admin\Views\Product\Formulario.cshtml" />
     <Content Include="Areas\Admin\Views\Size\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Size\Formulario3.cshtml" />
+    <Content Include="Areas\Admin\Views\Provider\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Provider\Formulario3.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
