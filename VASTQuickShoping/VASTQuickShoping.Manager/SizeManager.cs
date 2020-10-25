@@ -58,5 +58,18 @@ namespace VASTQuickShoping.Manager
                 return context.SaveChanges();
             }
         }
+
+        public IEnumerable<Size> GetAllSimple()
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                var lista = context.Sizes
+                    .Where(k => k.State == true)
+                    .Select(k => new { k.SizeID, k.Name }).ToList()
+                    .Select(k => new Size { SizeID = k.SizeID, Name = k.Name });
+
+                return lista;
+            }
+        }
     }
 }

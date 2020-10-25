@@ -9,7 +9,7 @@ namespace VASTQuickShoping.Manager.Contracts
 {
    public interface IDepartmentManager : ICrud<Department>
     {
-
+        IEnumerable<Department> GetAllSimple();
 
     }
 }

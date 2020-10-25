@@ -17,7 +17,8 @@ namespace VASTQuickShoping.Manager.Contracts
         {
             using (var context=new ApplicationDbContext())
             {
-                var lista = context.Products.Include("Category").Include("Brand")
+                var lista = context.Products.Include("Category")
+                    .Include("Brand").Include("Size").Include("Provider").Include("Department")
                     .Where(k => k.State == status)
                     .ToList();
                 return lista;
@@ -28,7 +29,7 @@ namespace VASTQuickShoping.Manager.Contracts
         {
             using (var context = new ApplicationDbContext())
             {
-                
+
                 var lista = context.Products
                     .Where(k => k.State == status)
                     .Select(k => new ProductDTO
@@ -41,7 +42,13 @@ namespace VASTQuickShoping.Manager.Contracts
                         Stock = k.Stock,
                         Discount = k.Discount,
                         Category = k.Category.Name,
-                        Brand = k.Brand.Name
+                        Brand = k.Brand.Name,
+                        Size = k.Size.Name,
+                        Department = k.Department.Name,
+                        Provider = k.Provider.Name
+                        
+
+
                     })
                     .ToList();
                 return lista;

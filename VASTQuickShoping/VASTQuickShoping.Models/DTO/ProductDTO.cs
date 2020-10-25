@@ -17,6 +17,9 @@ namespace VASTQuickShoping.Models.DTO
         public int Stock { get; set; }
         public string Brand { get; set; }
         public string Category { get; set; }
+        public string Size { get; set; }
+        public string Department { get; set; }
+        public string Provider { get; set; }
 
     }
 }

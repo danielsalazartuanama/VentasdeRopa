@@ -9,5 +9,6 @@ namespace VASTQuickShoping.Manager.Contracts
 {
     interface IProviderManager:ICrud<Provider>
     {
+        IEnumerable<Provider> GetAllSimple();
     }
 }

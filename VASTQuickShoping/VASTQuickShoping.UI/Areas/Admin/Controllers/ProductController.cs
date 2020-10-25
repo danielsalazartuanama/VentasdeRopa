@@ -24,6 +24,10 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
             ViewBag.op = CRUD.Insertar.ToString();
             ViewBag.categ =new SelectList( new CategoryManager().GetAllSimple(),"CategoryID","Name");
             ViewBag.bran =new SelectList( new BrandManager().GetAllSimple(),"BrandID","Name");
+            ViewBag.siz = new SelectList(new SizeManager().GetAllSimple(), "SizeID","Name" );
+            ViewBag.depar = new SelectList(new DepartmentManager().GetAllSimple(), "DepartmentID", "Name");
+            ViewBag.provi = new SelectList(new ProviderManager().GetAllSimple(), "ProviderID", "Name");
+
             return View("Formulario", new Product());
         }
 
@@ -33,6 +37,9 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
             obj.Fecha = DateTime.Now.Date;
             ViewBag.categ = new SelectList(new CategoryManager().GetAllSimple(), "CategoryID", "Name");
             ViewBag.bran = new SelectList(new BrandManager().GetAllSimple(), "BrandID", "Name");
+            ViewBag.siz = new SelectList(new SizeManager().GetAllSimple(), "SizeID", "Name");
+            ViewBag.depar = new SelectList(new DepartmentManager().GetAllSimple(), "DepartmentID", "Name");
+            ViewBag.provi = new SelectList(new ProviderManager().GetAllSimple(), "ProviderID", "Name");
 
             if (ModelState.IsValid)
             {
@@ -49,14 +56,19 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Modificar(int id)
         {
+            
             ViewBag.op = CRUD.Modificar.ToString();
             ViewBag.categ = new SelectList(new CategoryManager().GetAllSimple(), "CategoryID", "Name");
             ViewBag.bran = new SelectList(new BrandManager().GetAllSimple(), "BrandID", "Name");
+            ViewBag.siz = new SelectList(new SizeManager().GetAllSimple(), "SizeID", "Name");
+            ViewBag.depar = new SelectList(new DepartmentManager().GetAllSimple(), "DepartmentID", "Name");
+            ViewBag.provi = new SelectList(new ProviderManager().GetAllSimple(), "ProviderID", "Name");
             return View("Formulario", new ProductManager().Get(id));//un objeto categorua para que el objeto no quede nulo
         }
         [HttpPost]
         public ActionResult Modificar(Product obj)
         {
+            obj.Fecha = DateTime.Now.Date;
             if (ModelState.IsValid)
             {
                 int rpta = new ProductManager().Update(obj);//despues de ingreesar el dato nos dirija al index
@@ -67,8 +79,19 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
                 ViewBag.op = CRUD.Modificar.ToString();
                 ViewBag.categ = new SelectList(new CategoryManager().GetAllSimple(), "CategoryID", "Name");
                 ViewBag.bran = new SelectList(new BrandManager().GetAllSimple(), "BrandID", "Name");
+                ViewBag.siz = new SelectList(new SizeManager().GetAllSimple(), "SizeID", "Name");
+                ViewBag.depar = new SelectList(new DepartmentManager().GetAllSimple(), "DepartmentID", "Name");
+                ViewBag.provi = new SelectList(new ProviderManager().GetAllSimple(), "ProviderID", "Name");
                 return View("Formulario", obj);//que lo muestre los datos que el usuario mismo a ingresado
             }
+        }
+
+        [HttpGet]
+
+        public ActionResult Eliminar(int id)
+        {
+            _ = new ProductManager().Delete(id);
+            return RedirectToAction("Index");
         }
     }
 }

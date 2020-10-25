@@ -12,36 +12,68 @@
     {
         @Html.HiddenFor(model => model.ProductID)
     }
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="Name" class="control-label">Nombre: </label>
-                @Html.TextBoxFor(model => model.Name, new { @class="form-control"})
-                @Html.ValidationMessageFor(model => model.Name, null, new { @class = "badge badge-danger" })
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-group">
-                <label for="CategoryID" class="control-label">Categoría: </label>
-                @Html.DropDownListFor(model => model.CategoryID, (IEnumerable<SelectListItem>)ViewBag.categ, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.CategoryID, null, new { @class = "badge badge-danger" })
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-group">
-                <label for="BrandID" class="control-label">Marca: </label>
-                @Html.DropDownListFor(model => model.BrandID, (IEnumerable<SelectListItem>)ViewBag.bran, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.BrandID, null, new { @class = "badge badge-danger" })
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-group">
-                <label for="SKU" class="control-label">SKU: </label>
-                @Html.TextBoxFor(model => model.SKU, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.SKU, null, new { @class = "badge badge-danger" })
-            </div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label for="Name" class="control-label">Nombre: </label>
+            @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Name, null, new { @class = "badge badge-danger" })
         </div>
     </div>
+
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label for="CategoryID" class="control-label">Categoría: </label>
+            @Html.DropDownListFor(model => model.CategoryID, (IEnumerable<SelectListItem>)ViewBag.categ, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.CategoryID, null, new { @class = "badge badge-danger" })
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label for="BrandID" class="control-label">Marca: </label>
+            @Html.DropDownListFor(model => model.BrandID, (IEnumerable<SelectListItem>)ViewBag.bran, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.BrandID, null, new { @class = "badge badge-danger" })
+        </div>
+    </div>
+
+
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label for="SizeID" class="control-label">Talla: </label>
+            @Html.DropDownListFor(model => model.SizeID, (IEnumerable<SelectListItem>)ViewBag.siz, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.SizeID, null, new { @class = "badge badge-danger" })
+        </div>
+    </div>
+
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label for="DepartmentID" class="control-label">Departamento de venta: </label>
+            @Html.DropDownListFor(model => model.DepartmentID, (IEnumerable<SelectListItem>)ViewBag.depar, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.DepartmentID, null, new { @class = "badge badge-danger" })
+        </div>
+    </div>
+
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label for="ProviderID" class="control-label">Proveedor </label>
+            @Html.DropDownListFor(model => model.ProviderID, (IEnumerable<SelectListItem>)ViewBag.provi, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.ProviderID, null, new { @class = "badge badge-danger" })
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label for="SKU" class="control-label">SKU: </label>
+            @Html.TextBoxFor(model => model.SKU, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.SKU, null, new { @class = "badge badge-danger" })
+        </div>
+    </div>
+</div>
     <div class="row">
         <div class="col-sm-2">
             <div class="form-group">

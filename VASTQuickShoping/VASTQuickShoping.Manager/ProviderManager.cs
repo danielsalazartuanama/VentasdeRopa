@@ -38,6 +38,19 @@ namespace VASTQuickShoping.Manager
             return lista;
         }
 
+        public IEnumerable<Provider> GetAllSimple()
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                var lista = context.Providers
+                    .Where(k => k.State == true)
+                    .Select(k => new { k.ProviderID, k.Name }).ToList()
+                    .Select(k => new Provider { ProviderID = k.ProviderID, Name = k.Name });
+
+                return lista;
+            }
+        }
+
         public int Insert(Provider obj)
         {
             using (var context = new ApplicationDbContext())
