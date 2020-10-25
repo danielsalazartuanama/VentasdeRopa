@@ -63,9 +63,9 @@
     <Compile Include="Domain\Size.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="Identity\ApplicationUser.cs" />
-    <Compile Include="Migrations\202010240545488_Start.cs" />
-    <Compile Include="Migrations\202010240545488_Start.Designer.cs">
-      <DependentUpon>202010240545488_Start.cs</DependentUpon>
+    <Compile Include="Migrations\202010242106156_Start.cs" />
+    <Compile Include="Migrations\202010242106156_Start.Designer.cs">
+      <DependentUpon>202010242106156_Start.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +75,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010240545488_Start.resx">
-      <DependentUpon>202010240545488_Start.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010242106156_Start.resx">
+      <DependentUpon>202010242106156_Start.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

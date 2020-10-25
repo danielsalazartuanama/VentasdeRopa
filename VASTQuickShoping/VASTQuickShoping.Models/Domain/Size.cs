@@ -13,7 +13,7 @@ namespace VASTQuickShoping.Models.Domain
 
 
         [Required(ErrorMessage = "El campo es obligatorio")]
-        [StringLength(20, ErrorMessage = "No puede ingresar mas de 52 caracteres")]
+        [StringLength(20, ErrorMessage = "No puede ingresar mas de 20 caracteres")]
         public string Name { get; set; }//el nombre de la talla
         [Required]
         public bool State { get; set; }
