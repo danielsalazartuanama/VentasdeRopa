@@ -59,8 +59,10 @@
     <Compile Include="Contracts\IBrandManager.cs" />
     <Compile Include="Contracts\ICategoryManager.cs" />
     <Compile Include="Contracts\ICrud.cs" />
+    <Compile Include="Contracts\IDepartmentManager.cs" />
     <Compile Include="Contracts\IProductManager.cs" />
     <Compile Include="Contracts\ISizeManager.cs" />
+    <Compile Include="DepartmentManager.cs" />
     <Compile Include="ProductManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SizeManager.cs" />
