@@ -47,7 +47,7 @@
 
     <div class="col-sm-2">
         <div class="form-group">
-            <label for="DepartmentID" class="control-label">Departamento de venta: </label>
+            <label for="DepartmentID" class="control-label">GÉNERO: </label>
             @Html.DropDownListFor(model => model.DepartmentID, (IEnumerable<SelectListItem>)ViewBag.depar, new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.DepartmentID, null, new { @class = "badge badge-danger" })
         </div>

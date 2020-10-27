@@ -1,40 +1,53 @@
 ﻿@model IEnumerable<VASTQuickShoping.Models.Domain.Brand>
 @{
     ViewBag.Title = "Index";
+
 }
-
-<h2>Index</h2>
-
-<div class="row">
-    <div class="col-sm-4">
-        <a class="btn btn-danger form-control" href="~/admin/brand/insertar">Nuevo</a>
+@section Misestilos{
+    <link href="~/Assets/css/blanco.css" rel="stylesheet" />
+}
+<br />
+<h2>Tabla Marca</h2>
+<br />
+<div class="mover">
+    <div class="row">
+        <div class="col-sm-4">
+            <center>
+                <a class="btn btn-danger form-control" href="~/admin/brand/insertar">Nuevo</a>
+            </center>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-sm-12">
-        <table class="table table-stripe table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th style="width:60%;">NOMBRE</th>
-                    <th style="width: 40%;"></th>
 
+    <br />
+    
 
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)//item es un objeto por eso lo pongo @item categoria
-                {
+    <div class="row">
+
+        <div class="col-sm-12">
+            <table class="table table-stripe table-hover">
+                <thead class="thead-dark">
                     <tr>
-                        <td>@item.Name</td>
-                        <td>
-                            <a href="~/admin/brand/modificar/@item.BrandID" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true">Editar</span></a>
-                            <a href="~/admin/brand/eliminar/@item.BrandID" class="btn btn-sm btn-success" onclick="return confirm('¿Estas seguro de eliminar este registro?')">Eliminar</a>
-                        </td>
+                        <th style="width:60%;">NOMBRE</th>
+                        <th style="width: 40%;"></th>
+
 
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)//item es un objeto por eso lo pongo @item categoria
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>
+                                <a href="~/admin/brand/modificar/@item.BrandID" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true">Editar</span></a>
+                                <a href="~/admin/brand/eliminar/@item.BrandID" class="btn btn-sm btn-success" onclick="return confirm('¿Estas seguro de eliminar este registro?')">Eliminar</a>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
