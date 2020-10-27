@@ -321,6 +321,7 @@
     <Content Include="Assets\js\minicart.js" />
     <Content Include="Assets\js\move-top.js" />
     <Content Include="Assets\js\owl.carousel.js" />
+    <Content Include="Assets\js\Product\imageProduct.js" />
     <Content Include="Assets\js\responsiveslides.min.js" />
     <Content Include="Assets\js\SmoothScroll.min.js" />
     <Content Include="Assets\webfonts\fa-brands-400.svg" />
@@ -517,6 +518,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Assets\images\Product\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

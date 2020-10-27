@@ -45,7 +45,7 @@ namespace VASTQuickShoping.Models.Domain
         public int Stock { get; set; }
         [Required]
         public int StockMin { get; set; }
-        [Required]
+        [DataType(DataType.Date)]
         public DateTime Fecha { get; set; }
         [Required]
         public bool State { get; set; }

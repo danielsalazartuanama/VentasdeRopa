@@ -4,7 +4,7 @@
 }
 
 <h2>Producto - Detalle</h2>
-@using (Html.BeginForm((String)ViewBag.op, "Product", FormMethod.Post))
+@using (Html.BeginForm((String)ViewBag.op, "Product", FormMethod.Post, new { enctype = "multipart/form-data"}))
 {
     @Html.AntiForgeryToken()
 
@@ -12,74 +12,74 @@
     {
         @Html.HiddenFor(model => model.ProductID)
     }
-<div class="row">
-    <div class="col-sm-6">
-        <div class="form-group">
-            <label for="Name" class="control-label">Nombre: </label>
-            @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Name, null, new { @class = "badge badge-danger" })
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="Name" class="control-label">Nombre: </label>
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Name, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="CategoryID" class="control-label">Categoría: </label>
+                @Html.DropDownListFor(model => model.CategoryID, (IEnumerable<SelectListItem>)ViewBag.categ, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CategoryID, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="BrandID" class="control-label">Marca: </label>
+                @Html.DropDownListFor(model => model.BrandID, (IEnumerable<SelectListItem>)ViewBag.bran, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BrandID, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+
+
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="SizeID" class="control-label">Talla: </label>
+                @Html.DropDownListFor(model => model.SizeID, (IEnumerable<SelectListItem>)ViewBag.siz, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SizeID, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="DepartmentID" class="control-label">GÉNERO: </label>
+                @Html.DropDownListFor(model => model.DepartmentID, (IEnumerable<SelectListItem>)ViewBag.depar, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.DepartmentID, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="ProviderID" class="control-label">Proveedor </label>
+                @Html.DropDownListFor(model => model.ProviderID, (IEnumerable<SelectListItem>)ViewBag.provi, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProviderID, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="SKU" class="control-label">SKU: </label>
+                @Html.TextBoxFor(model => model.SKU, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SKU, null, new { @class = "badge badge-danger" })
+            </div>
         </div>
     </div>
-
-    <div class="col-sm-2">
-        <div class="form-group">
-            <label for="CategoryID" class="control-label">Categoría: </label>
-            @Html.DropDownListFor(model => model.CategoryID, (IEnumerable<SelectListItem>)ViewBag.categ, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.CategoryID, null, new { @class = "badge badge-danger" })
-        </div>
-    </div>
-    <div class="col-sm-2">
-        <div class="form-group">
-            <label for="BrandID" class="control-label">Marca: </label>
-            @Html.DropDownListFor(model => model.BrandID, (IEnumerable<SelectListItem>)ViewBag.bran, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.BrandID, null, new { @class = "badge badge-danger" })
-        </div>
-    </div>
-
-
-    <div class="col-sm-2">
-        <div class="form-group">
-            <label for="SizeID" class="control-label">Talla: </label>
-            @Html.DropDownListFor(model => model.SizeID, (IEnumerable<SelectListItem>)ViewBag.siz, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.SizeID, null, new { @class = "badge badge-danger" })
-        </div>
-    </div>
-
-    <div class="col-sm-2">
-        <div class="form-group">
-            <label for="DepartmentID" class="control-label">GÉNERO: </label>
-            @Html.DropDownListFor(model => model.DepartmentID, (IEnumerable<SelectListItem>)ViewBag.depar, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.DepartmentID, null, new { @class = "badge badge-danger" })
-        </div>
-    </div>
-
-    <div class="col-sm-2">
-        <div class="form-group">
-            <label for="ProviderID" class="control-label">Proveedor </label>
-            @Html.DropDownListFor(model => model.ProviderID, (IEnumerable<SelectListItem>)ViewBag.provi, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.ProviderID, null, new { @class = "badge badge-danger" })
-        </div>
-    </div>
-
-
-
-
-
-
-    <div class="col-sm-2">
-        <div class="form-group">
-            <label for="SKU" class="control-label">SKU: </label>
-            @Html.TextBoxFor(model => model.SKU, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.SKU, null, new { @class = "badge badge-danger" })
-        </div>
-    </div>
-</div>
     <div class="row">
         <div class="col-sm-2">
             <div class="form-group">
                 <label for="CostPrice" class="control-label">P. Costo: </label>
-                @Html.TextBoxFor(model => model.CostPrice, new { @class = "form-control",type="number",step="0.1" })
-                @Html.ValidationMessageFor(model => model.CostPrice,null, new { @class = "badge badge-danger"})
+                @Html.TextBoxFor(model => model.CostPrice, new { @class = "form-control", type = "number", step = "0.1" })
+                @Html.ValidationMessageFor(model => model.CostPrice, null, new { @class = "badge badge-danger" })
             </div>
         </div>
         <div class="col-sm-2">
@@ -113,7 +113,7 @@
         <div class="col-sm-2">
             <div class="form-group">
                 <label for="State" class="control-label">Activo: </label>
-                @Html.CheckBoxFor(model => model.State, new { @class = "form-control"})
+                @Html.CheckBoxFor(model => model.State, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.State, null, new { @class = "badge badge-danger" })
             </div>
         </div>
@@ -122,15 +122,65 @@
 
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-8">
             <div class="form-group">
                 <label for="Description" class="control-label">Descripción: </label>
                 @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Description, null, new { @class = "badge badge-danger" })
             </div>
         </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="Fecha" class="control-label">Fecha: </label>
+                @Html.TextAreaFor(model => model.Fecha, new { @class = "form-control", @Value = Model.Fecha.ToString("yyyy/MM/dd") })
+                @Html.ValidationMessageFor(model => model.Fecha, null, new { @class = "badge badge-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 form-group">
+            <label for="" class="control-label">Imagen 1</label>
+            <div class="thumbnail">
+                <img src="~/Assets/images/Product/@(Model.ProductID+"_Imagen_1.png")" id="imgProduct1" alt="No se pudo cargar la imagen 1" />
+            </div>
+            <div class="input-group">
+                <input type="file" id="miFile1" name="fileImagen" value="image/*" />
+                <label for="miFile1">Elija una imagen</label>
+            </div>
+        </div>
+        <div class="col-sm-3 form-group">
+            <label for="" class="control-label">Imagen 2</label>
+            <div class="thumbnail">
+                <img src="~/Assets/images/Product/@(Model.ProductID+"_Imagen_2.png")" id="imgProduct2" alt="No se pudo cargar la imagen 2" />
+            </div>
+            <div class="input-group">
+                <input type="file" id="miFile2" name="fileImagen" value="image/*" />
+                <label for="miFile2">Elija una imagen</label>
+            </div>
+        </div>
+        <div class="col-sm-3 form-group">
+            <label for="" class="control-label">Imagen 3</label>
+            <div class="thumbnail">
+                <img src="~/Assets/images/Product/@(Model.ProductID+"_Imagen_3.png")" id="imgProduct3" alt="No se pudo cargar la imagen 3" />
+            </div>
+            <div class="input-group">
+                <input type="file" id="miFile3" name="fileImagen" value="image/*" />
+                <label for="miFile3">Elija una imagen</label>
+            </div>
+        </div>
+        <div class="col-sm-3 form-group">
+            <label for="" class="control-label">Imagen 4</label>
+            <div class="thumbnail">
+                <img src="~/Assets/images/Product/@(Model.ProductID+"_Imagen_4.png")" id="imgProduct4" alt="No se pudo cargar la imagen 4" />
+            </div>
+            <div class="input-group">
+                <input type="file" id="miFile4" name="fileImagen" value="image/*" />
+                <label for="miFile4">Elija una imagen</label>
+            </div>
+        </div>
     </div>
 
+    
 
     <br />
     <div class="row">
@@ -141,4 +191,9 @@
             <button type="button" class="btn btn-danger form-control" data-dismiss="modal">Cancelar</button>
         </div>
     </div>
+}
+
+@section Scripts{
+
+    <script src="~/Assets/js/Product/imageProduct.js"></script>
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Web;
 using System.Web.Mvc;
 using VASTQuickShoping.Manager;
 using VASTQuickShoping.Manager.Contracts;
@@ -32,9 +33,9 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Insertar(Product obj)
+        public ActionResult Insertar(Product obj, HttpPostedFileBase[] fileImagen)
         {
-            obj.Fecha = DateTime.Now.Date;
+            
             ViewBag.categ = new SelectList(new CategoryManager().GetAllSimple(), "CategoryID", "Name");
             ViewBag.bran = new SelectList(new BrandManager().GetAllSimple(), "BrandID", "Name");
             ViewBag.siz = new SelectList(new SizeManager().GetAllSimple(), "SizeID", "Name");
@@ -44,6 +45,19 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 int rpta = new ProductManager().Insert(obj);
+
+                if (fileImagen != null)
+                {
+                    for (int i = 0; i < fileImagen.Length; i++)
+                    {
+                        if (fileImagen[i] != null)
+                        {
+                            string archivo = obj.ProductID + "_Imagen_" + (i + 1) + ".png";
+                            fileImagen[i].SaveAs(Server.MapPath("~/assets/images/Product/" + archivo));
+                        }
+                    }
+                }
+
                 return RedirectToAction("Index");
             }
             else
@@ -68,7 +82,7 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Modificar(Product obj)
         {
-            obj.Fecha = DateTime.Now.Date;
+            
             if (ModelState.IsValid)
             {
                 int rpta = new ProductManager().Update(obj);//despues de ingreesar el dato nos dirija al index
