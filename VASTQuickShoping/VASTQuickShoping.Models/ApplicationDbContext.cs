@@ -17,8 +17,8 @@ namespace VASTQuickShoping.Models
         {
             
             
-            //Database.SetInitializer(
-            //    new MigrateDatabaseToLatestVersion<ApplicationDbContext, Migrations.Configuration>("miCadena"));
+            Database.SetInitializer(
+                new MigrateDatabaseToLatestVersion<ApplicationDbContext, Migrations.Configuration>("miCadena"));
 
         }
         public virtual DbSet<Product> Products { get; set; }

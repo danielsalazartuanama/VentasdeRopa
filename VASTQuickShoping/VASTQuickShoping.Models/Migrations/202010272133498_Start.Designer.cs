@@ -13,7 +13,7 @@ namespace VASTQuickShoping.Models.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202010271557347_Start"; }
+            get { return "202010272133498_Start"; }
         }
         
         string IMigrationMetadata.Source
