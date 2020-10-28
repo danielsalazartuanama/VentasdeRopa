@@ -48,10 +48,13 @@ namespace VASTQuickShoping.UI.ViewModels
 
     public class LoginViewModel
     {
+        //[Required]
+        //[Display(Name = "Correo electrónico")]
+        //[EmailAddress]
+        //public string Email { get; set; }
         [Required]
-        [Display(Name = "Correo electrónico")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name ="Nombre de Usuario")]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -64,6 +67,11 @@ namespace VASTQuickShoping.UI.ViewModels
 
     public class RegisterViewModel
     {
+        [Required]
+        [MaxLength(20, ErrorMessage = "El número de caracteres no puede ser mayor que 20.")]
+        [Display(Name ="Usuario")]
+        public string UserName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Correo electrónico")]

@@ -23,6 +23,7 @@
 
 </head>
 <body>
+    @using Microsoft.AspNet.Identity
     <header>
         <div class="container">
             <nav class="top_nav d-flex pt-3 pb-1">
@@ -63,7 +64,7 @@
                     </form>
                     <div class="nav-icon d-flex">
                         <a class="text-dark login_btn align-self-center mx-3" href="#myModal_btn" data-toggle="modal" data-target="#myModal_btn">
-                            <i class="far fa-user"></i>
+                            <i class="far fa-user">@(Request.IsAuthenticated)?@User.Identity.GetUserName()</i>
                         </a>
                     </div>
                 </div>
