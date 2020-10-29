@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
@@ -21,7 +23,33 @@ namespace VASTQuickShoping.UI
         public Task SendAsync(IdentityMessage message)
         {
             // Conecte su servicio de correo electrónico aquí para enviar correo electrónico.
-            return Task.FromResult(0);
+            SmtpClient smtp = new SmtpClient();
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new NetworkCredential("carabayllo_2000@hotmail.com", "jhony123");
+            smtp.EnableSsl = true;
+            smtp.Port = 587;
+            smtp.Host = "smtp-mail.outlook.com";
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+
+            try
+            {
+
+                MailMessage mail = new MailMessage("carabayllo_2000@hotmail.com", message.Destination.Trim());
+                mail.Subject =message.Subject;
+                mail.Body = message.Body;
+                mail.IsBodyHtml = true;
+                smtp.Send(mail);
+                return Task.FromResult(0);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+          
         }
     }
 
