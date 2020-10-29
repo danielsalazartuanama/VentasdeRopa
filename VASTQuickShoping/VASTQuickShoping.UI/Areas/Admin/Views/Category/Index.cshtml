@@ -4,7 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<br />
+<center>
+    <h2>Categoria</h2>
+</center>
 
 <div class="row">
     <div class="col-sm-4">
@@ -19,25 +22,43 @@
                     <th style="width:40%;">NOMBRE</th>
                     <th style="width: 50%;">DESCRIPCION</th>
                     <th style="width: 10%;"></th>
-                   
+
 
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model)//item es un objeto por eso lo pongo @item categoria
                 {
-                <tr>
-                    <td>@item.Name</td>
-                    <td>@item.Descripcion</td>
-                    <td>
-                        <a href="~/admin/category/modificar/@item.CategoryID" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true" >Editar</span></a>
-                        <a href="~/admin/category/eliminar/@item.CategoryID" class="btn btn-sm btn-success" onclick="return confirm('¿Estas seguro de eliminar este registro?')">Eliminar</a>
-                    </td>
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Descripcion</td>
+                        <td>
+                            <a href="~/admin/category/modificar/@item.CategoryID" class="btn btn-sm btn-primary">
+                                <img src="https://img.icons8.com/carbon-copy/30/000000/pencil.png" />
+                            </a>
+                            <a href="~/admin/category/eliminar/@item.CategoryID" class="btn btn-sm btn-success" onclick="return confirm('¿Estas seguro de eliminar este registro?')">
+                                <img src="https://img.icons8.com/wired/30/000000/trash.png" />
 
-                </tr>
+                            </a>
+                        </td>
+
+                    </tr>
                 }
             </tbody>
         </table>
     </div>
 </div>
 
+<br />
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+        @(ViewBag.state == true ? "Activo":"Inactivo")
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
+        <a class="dropdown-item" href="~/admin/category/index?state=true">Activo</a>
+        <a class="dropdown-item" href="~/admin/category/index?state=false">Inactivo</a>
+
+    </div>
+</div>

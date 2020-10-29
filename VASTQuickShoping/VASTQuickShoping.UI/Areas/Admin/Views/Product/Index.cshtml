@@ -3,8 +3,10 @@
 @{
     ViewBag.Title = "Product";
 }
-
-<h2>Index</h2>
+<br />
+<br /><center>
+    <h2>Producto</h2>
+</center>
 
 <br />
 
@@ -55,8 +57,12 @@
                     <td>@item.Department</td>
                     <td>@item.Provider</td>
                     <td>
-                        <a href="~/admin/product/modificar/@item.ProductID" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true">Editar</span></a>
-                        <a href="~/admin/product/eliminar/@item.ProductID" class="btn btn-sm btn-success" onclick="return confirm('¿Estas seguro de eliminar este registro?')">Eliminar</a>
+                        <a href="~/admin/product/modificar/@item.ProductID" class="btn btn-sm btn-primary">
+                            <img src="https://img.icons8.com/carbon-copy/30/000000/pencil.png" />
+                        </a>
+                        <a href="~/admin/product/eliminar/@item.ProductID" class="btn btn-sm btn-success" onclick="return confirm('¿Estas seguro de eliminar este registro?')">
+                            <img src="https://img.icons8.com/wired/30/000000/trash.png" />
+                        </a>
                     </td>
 
                 </tr>
