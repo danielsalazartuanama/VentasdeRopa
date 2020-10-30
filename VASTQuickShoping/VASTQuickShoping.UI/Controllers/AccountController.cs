@@ -178,7 +178,7 @@ namespace VASTQuickShoping.UI.Controllers
         //get:/Account/
        public ActionResult Confirmacioncuenta()
         {
-            return View("Error");
+            return View("Confirmacioncuenta");
         }
 
         //
