@@ -25,17 +25,17 @@ namespace VASTQuickShoping.UI
             // Conecte su servicio de correo electrónico aquí para enviar correo electrónico.
             SmtpClient smtp = new SmtpClient();
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential("carabayllo_2000@hotmail.com", "jhony123");
+            smtp.Credentials = new NetworkCredential("tareaventas@gmail.com", "dFQ8WUG65X8eYHVzR94I9A==");
             smtp.EnableSsl = true;
             smtp.Port = 587;
-            smtp.Host = "smtp-mail.outlook.com";
+            smtp.Host = "smtp.gmail.com";
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
 
             try
             {
 
-                MailMessage mail = new MailMessage("carabayllo_2000@hotmail.com", message.Destination.Trim());
+                MailMessage mail = new MailMessage("tareaventas@gmail.com", message.Destination.Trim());
                 mail.Subject =message.Subject;
                 mail.Body = message.Body;
                 mail.IsBodyHtml = true;
