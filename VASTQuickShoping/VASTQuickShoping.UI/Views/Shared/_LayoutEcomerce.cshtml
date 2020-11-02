@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="~/Assets/css/blanco.css" rel="stylesheet" />
     @RenderSection("MisEstilos", false)
 
 
@@ -17,93 +17,123 @@
 <body>
 
     @using Microsoft.AspNet.Identity
-    <!--Navbar -->
-    <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-success lighten-1">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
-                aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="~/home/index">
-                        INICIO
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        ADMIN
-                    </a>
-                    <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
-                        <a class="dropdown-item" href="~/Admin/Brand"><strong>Marca</strong></a>
-                        <a class="dropdown-item" href="~/Admin/Size"><strong>Talla</strong></a>
-                        <a class="dropdown-item" href="~/Admin/category"><strong>Categoria</strong></a>
-                        <a class="dropdown-item" href="~/Admin/department"><strong>Genero</strong></a>
-                        <a class="dropdown-item" href="~/Admin/product"><strong>Producto</strong></a>
-                        <a class="dropdown-item" href="~/Admin/provider"><strong>Proveedor</strong></a>
-
-                    </div>
-
-
-                </li>
-
-
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        Categorias
-                    </a>
-                    <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
-                        <a class="dropdown-item" href="#"><strong>Moda Hombre</strong></a>
-                        <a class="dropdown-item" href="#">Polos</a>
-                        <a class="dropdown-item" href="#">Casacas</a>
-                        <a class="dropdown-item" href="#">Polerones</a>
-                        <a class="dropdown-item" href="#"><strong>Moda Infantil</strong></a>
-                        <a class="dropdown-item" href="#">Bodys</a>
-                        <a class="dropdown-item" href="#">Pantalones y Jeans</a>
-                        <a class="dropdown-item" href="#">Buzos y Conjuntos</a>
-                    </div>
-
-
-
-                </li>
-
-            </ul>
-            <ul class="navbar-nav ml-auto nav-flex-icons">
-
-                <!-- Search form -->
-
-
-                <svg width="30" height="40" viewBox="0 0 16 16" class="bi bi-bag-check-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M5.5 3.5a2.5 2.5 0 0 1 5 0V4h-5v-.5zm6 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
-                </svg>
-                <li class="nav-item avatar dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-
-                        @User.Identity.GetUserName()
-                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" width="30" height="30"
-                             alt="avatar image">
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
-                         aria-labelledby="navbarDropdownMenuLink-55">
-                        <a class="dropdown-item" href="~/Account/Login">Iniciar Sesión</a>
-                        <a class="dropdown-item" href="~/Account/Register">Registrate</a>
-                        <a class="dropdown-item" href="~/home/index">cerrar Sesión</a>
-
-                    </div>
+    <section class="contain">
+        <div class="item">
+            <ul class="nav">
+                <li class="nav-item active offset-1 ">
+                    <a class="nav-link text-white" href="#">FONOCOMPRAS  203.7050 WHATSAPP Y ATENCIÓN AL CLIENTE 512-3333</a>
                 </li>
             </ul>
         </div>
+        <div class="item">
+            <div class="mies">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#!">LINIO</a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item  ">
+                        <a class="nav-link text-white" href="#!">TOTTUS</a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#!">SODIMAC</a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" href="#!">SEGUROS</a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#!">VIAJES</a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" href="#!">BANCO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand offset-1" href="#">
+            <img src="~/Assets/images/p2.png" alt="mi logo" /><strong>Tienda de Ropas</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container ">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form id="agrandar">
+                    <input class="form-control font-weight-bold " type="search" placeholder="Busca tu ropa favorito" aria-label="Search">
+                </form>
+                <ul id="font" class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Categorias
+                        </a>
+                        <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
+                            <a class="dropdown-item" href="#"><strong>Moda Hombre</strong></a>
+                            <a class="dropdown-item" href="#">Polos</a>
+                            <a class="dropdown-item" href="#">Casacas</a>
+                            <a class="dropdown-item" href="#">Polerones</a>
+                            <a class="dropdown-item" href="#"><strong>Moda Infantil</strong></a>
+                            <a class="dropdown-item" href="#">Bodys</a>
+                            <a class="dropdown-item" href="#">Pantalones y Jeans</a>
+                            <a class="dropdown-item" href="#">Buzos y Conjuntos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-platzi" href="#">Compra de Tickets</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </nav>
-    <!--/.Navbar -->
+    <section class="conta">
+        <div class="itemsegun">
+            <ul class="nav">
+                <li class="nav-item active offset-1">
+                    <a class="nav-link text-dark font-weight-bold" href="#">NUESTRAS TIENDAS</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-dark font-weight-bold" href="#">NOVIOS</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-dark font-weight-bold" href="#">CMR PUNTOS</a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link text-dark font-weight-bold" href="#">PAGA TU CMR</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-dark font-weight-bold" href="#">FONOCOMPRAS</a>
+                </li>
+            </ul>
+            
+        </div>
+    </section>
 
 
+  
+
+    <br />
+ 
 
 
 
@@ -122,110 +152,34 @@
     <br />
     <br />
 
-
-
-    <!-- Footer -->
-    <footer class="page-footer font-small mdb-color lighten-3 pt-4">
-
-        <!-- Footer Elements -->
+    <!--footer-->
+    <footer id="footer"  class="pb-4 pt-4 ">
         <div class="container">
-
-            <!--Grid row-->
-            <div class="row">
-
-                <!--Grid column-->
-                <div class="col-lg-2 col-md-12 mb-4">
-
-                    <!--Image-->
-                    <div class="view overlay z-depth-1-half">
-                        <img src="~/Assets/images/blg6.jpg" class="img-fluid" alt="">
-                        <a href="">
-                            <div class="mask rgba-white-light"></div>
-                        </a>
-                    </div>
-
+            <div class="row text-center">
+                <div class="col-12 col-lg">
+                    <a href="#">Preguntas frecuentes</a>
                 </div>
-                <!--Grid column-->
-                <!--Grid column-->
-                <div class="col-lg-2 col-md-6 mb-4">
-
-                    <!--Image-->
-                    <div class="view overlay z-depth-1-half">
-                        <img src="~/Assets/images/blg5.jpg" class="img-fluid" alt="">
-                        <a href="">
-                            <div class="mask rgba-white-light"></div>
-                        </a>
-                    </div>
-
-
-
+                <div class="col-12 col-lg">
+                    <a href="#">Contactanos</a>
                 </div>
-
-
-                <div class="col-lg-2 col-md-12 mb-4">
-
-                    <!--Image-->
-                    <div class="view overlay z-depth-1-half">
-                        <img src="~/Assets/images/blg4.jpg" class="img-fluid" alt="">
-                        <a href="">
-                            <div class="mask rgba-white-light"></div>
-                        </a>
-                    </div>
-
+                <div class="col-12 col-lg">
+                    <a href="#">Prensa</a>
                 </div>
-
-                <div class="col-lg-2 col-md-12 mb-4">
-
-                    <!--Image-->
-                    <div class="view overlay z-depth-1-half">
-                        <img src="~/Assets/images/blg3.jpg" class="img-fluid" alt="">
-                        <a href="">
-                            <div class="mask rgba-white-light"></div>
-                        </a>
-                    </div>
-
+                <div class="col-12 col-lg">
+                    <a href="#">Conferencias</a>
                 </div>
-
-                <div class="col-lg-2 col-md-12 mb-4">
-
-                    <!--Image-->
-                    <div class="view overlay z-depth-1-half">
-                        <img src="~/Assets/images/blg2.jpg" class="img-fluid" alt="">
-                        <a href="">
-                            <div class="mask rgba-white-light"></div>
-                        </a>
-                    </div>
-
+                <div class="col-12 col-lg">
+                    <a href="#">Terminos y condiciones</a>
                 </div>
-                <div class="col-lg-2 col-md-12 mb-4">
-
-                    <!--Image-->
-                    <div class="view overlay z-depth-1-half">
-                        <img src="~/Assets/images/blg1.jpg" class="img-fluid" alt="">
-                        <a href="">
-                            <div class="mask rgba-white-light"></div>
-                        </a>
-                    </div>
-
+                <div class="col-12 col-lg">
+                    <a href="#">Privacidad</a>
                 </div>
-                <!--Grid column-->
-
+                <div class="col-12 col-lg">
+                    <a href="#">Provacidad</a>
+                </div>
             </div>
-            <!--Grid row-->
-
         </div>
-        <!-- Footer Elements -->
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">
-            © 2020 Copyright:
-            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-
     </footer>
-    <!-- Footer -->
-
-
 
 
     @RenderSection("scripts", required: false)

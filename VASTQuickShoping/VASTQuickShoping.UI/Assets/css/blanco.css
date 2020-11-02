@@ -1,8 +1,146 @@
-.mover{
-    width:70%;
-    height:10%;
-    justify-content:center;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Yanone+Kaffeesatz&display=swap');
+#footer {
+    background: linear-gradient(90deg,#1c3643,#273b47 25%,#1e5372)
 }
+.text-platzi{
+    color:#97c93e !important;
+}
+
+#footer a {
+    font-size:20px;
+    color:white;
+}
+
+#header img{
+    width:55px;
+}
+#font a{
+   
+    font-size: 20px;
+}
+
+#agrandar input{
+    width:550px;
+    right:950px;
+}
+
+#micolor a{
+ 
+    background-color:#eee1e1
+    
+}
+
+#mover {
+    
+    background-color: #97c93e;
+}
+/*
+#mover a{
+  
+   display:grid;
+
+    font-size:18px;
+  color:aliceblue;
+}*/
+
+.contain {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.item {
+    font-size: 15px;
+    color: white;
+    background-color: #e49494;
+   /** border: 1px solid red;*/
+}
+.item .mies{
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns:10% 10% 10% 10% 10% 10% 10%;
+}
+
+@media screen and (max-width:1250px) {
+    .contain {
+       display:none;
+    }
+}
+
+
+.conta {
+
+    display: grid;
+    grid-template-columns: 100%;
+}
+.itemsegun {
+    font-size:13px;
+    background-color: #eee1e1
+    /** border: 1px solid red;*/
+}
+
+.image{
+    background:#97c93e;
+}
+
+#main .carousel-inner img {
+    max-height:70vh;
+    object-fit: cover;
+    filter: grayscale(10%);
+}
+#carousels{
+    position:relative;
+}
+
+#carousels .overlay {
+    position : absolute;
+    
+    top:0;
+    bottom:0;
+    left:50px;
+    right:0;
+   
+    color:#1e5372;
+}
+
+#todo h1 {
+    font-size: 130px;
+    font-family: 'Elsie Swash Caps', cursive;
+}
+
+#carousels .overlay .container,
+#carousels .overlay .row{
+    height: 100%;
+}
+
+@media screen and (max-width:650px) {
+    #todo {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
