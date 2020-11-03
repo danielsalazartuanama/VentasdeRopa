@@ -16,7 +16,7 @@
 }
 #font a{
    
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #agrandar input{
@@ -48,7 +48,7 @@
     grid-template-columns: 60% 40%;
 }
 .item {
-    font-size: 15px;
+    font-size: 11px;
     color: white;
     background-color: #e49494;
    /** border: 1px solid red;*/
@@ -59,7 +59,7 @@
     grid-template-columns:10% 10% 10% 10% 10% 10% 10%;
 }
 
-@media screen and (max-width:1250px) {
+@media screen and (max-width:900px) {
     .contain {
        display:none;
     }
@@ -72,9 +72,14 @@
     grid-template-columns: 100%;
 }
 .itemsegun {
-    font-size:13px;
+    font-size:11px;
     background-color: #eee1e1
     /** border: 1px solid red;*/
+}
+@media screen and (max-width:900px) {
+    .itemsegun {
+        display: none;
+    }
 }
 
 .image{
@@ -82,7 +87,7 @@
 }
 
 #main .carousel-inner img {
-    max-height:70vh;
+    max-height:80vh;
     object-fit: cover;
     filter: grayscale(10%);
 }
@@ -102,6 +107,8 @@
 }
 
 #todo h1 {
+    position:relative;
+    top:-90px;
     font-size: 130px;
     font-family: 'Elsie Swash Caps', cursive;
 }
@@ -111,11 +118,40 @@
     height: 100%;
 }
 
-@media screen and (max-width:650px) {
-    #todo {
+@media screen and (max-width:800px) {
+    #todo  {
+      display:none;
+    }
+}
+
+.btn-plat{
+    position:relative;
+    top:-155px;
+    background-color:crimson;
+    color:white;
+    width:150px;
+}
+
+.descu {
+    position: relative;
+    top: -160px;
+    font-size: 30px;
+    font-family: 'Elsie Swash Caps', cursive;
+}
+@media screen and (max-width:900px) {
+    .btn-plat {
+        display: none;
+    }
+    .descu {
         display: none;
     }
 }
+
+
+
+
+
+
 
 
 

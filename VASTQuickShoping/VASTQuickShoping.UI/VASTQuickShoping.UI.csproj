@@ -191,6 +191,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\css\blanco.css" />
+    <Content Include="Assets\css\blancodos.css" />
     <Content Include="Assets\css\bootstrap.css" />
     <Content Include="Assets\css\checkout.css" />
     <Content Include="Assets\css\creditly.css" />
@@ -309,6 +310,7 @@
     <Content Include="Assets\images\pt6.jpg" />
     <Content Include="Assets\images\pt7.jpg" />
     <Content Include="Assets\images\pt8.jpg" />
+    <Content Include="Assets\js\app.js" />
     <Content Include="Assets\js\bootstrap.js" />
     <Content Include="Assets\js\creditly.js" />
     <Content Include="Assets\js\easing.js" />
