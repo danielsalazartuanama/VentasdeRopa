@@ -529,6 +529,10 @@ C:\Users\jhony\OneDrive\Documentos\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuic
 C:\Users\jhony\OneDrive\Documentos\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\obj\Debug\VASTQuickShoping.UI.csproj.CopyComplete
 C:\Users\jhony\OneDrive\Documentos\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\obj\Debug\VASTQuickShoping.UI.dll
 C:\Users\jhony\OneDrive\Documentos\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\obj\Debug\VASTQuickShoping.UI.pdb
+C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\es\EntityFramework.resources.dll
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\VASTQuickShoping.UI.dll.config
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\VASTQuickShoping.UI.dll
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\VASTQuickShoping.UI.pdb
@@ -631,12 +635,9 @@ C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.U
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.xml
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.Security.xml
-C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.Security.Facebook.xml
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\es\System.Web.Helpers.resources.dll
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\es\System.Web.Mvc.resources.dll
@@ -645,7 +646,6 @@ C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.U
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\es\System.Web.WebPages.resources.dll
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\es\EntityFramework.resources.dll
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\es\EntityFramework.SqlServer.resources.dll
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
