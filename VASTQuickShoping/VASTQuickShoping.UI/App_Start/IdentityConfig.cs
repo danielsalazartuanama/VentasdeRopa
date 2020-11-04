@@ -7,6 +7,7 @@ using System.Net.Mail;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
+using AES;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
@@ -22,10 +23,14 @@ namespace VASTQuickShoping.UI
     {
         public Task SendAsync(IdentityMessage message)
         {
+            string contraseña = "F+9hajPW+aO9FwPtPoyB4uT4aToU6eVW5AFUgB5v0/s=";
+            
+            string desencriptado = new MyRijndael().DecryptToString(contraseña);
+
             // Conecte su servicio de correo electrónico aquí para enviar correo electrónico.
             SmtpClient smtp = new SmtpClient();
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential("tareaventas@gmail.com", "dFQ8WUG65X8eYHVzR94I9A==");
+            smtp.Credentials = new NetworkCredential("tareaventas@gmail.com", desencriptado);
             smtp.EnableSsl = true;
             smtp.Port = 587;
             smtp.Host = "smtp.gmail.com";

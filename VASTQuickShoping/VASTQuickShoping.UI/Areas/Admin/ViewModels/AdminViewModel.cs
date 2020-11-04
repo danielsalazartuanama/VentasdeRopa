@@ -18,6 +18,9 @@ namespace VASTQuickShoping.UI.Areas.Admin.ViewModels
     public class EditUserViewModel
     {
         public string Id { get; set; }
+
+        [Required(AllowEmptyStrings = false)]
+        [Display(Name = "Usuario")]
         public string UserName { get; set; }
 
         [Required(AllowEmptyStrings = false)]

@@ -144,6 +144,7 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
             return View(new EditUserViewModel()
             {
                 Id = user.Id,
+                UserName = user.UserName,
                 Email = user.Email,
                 RolesList = RoleManager.Roles.ToList().Select(x => new SelectListItem()
                 {
