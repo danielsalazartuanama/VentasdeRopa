@@ -7,13 +7,13 @@ namespace VASTQuickShoping.Models.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class Start2 : IMigrationMetadata
+    public sealed partial class Start : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Start2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Start));
         
         string IMigrationMetadata.Id
         {
-            get { return "202011031809210_Start2"; }
+            get { return "202011031924203_Start"; }
         }
         
         string IMigrationMetadata.Source

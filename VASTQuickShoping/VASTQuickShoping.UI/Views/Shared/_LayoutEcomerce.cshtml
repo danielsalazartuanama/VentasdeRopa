@@ -81,7 +81,7 @@
                 </form>
                 <ul id="font" class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link md-4" href="#">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle " id="navbarDropdownMenuLink-555" data-toggle="dropdown"
@@ -99,11 +99,48 @@
                             <a class="dropdown-item" href="#">Buzos y Conjuntos</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-platzi" href="#">Compra de Tickets</a>
+                    <!---
+    <li class="nav-item">
+        <a class="nav-link" href="#">Nosotros</a>
+    </li>->
+    <!---
+    <li class="nav-item">
+        <a class="nav-link text-platzi" href="#">Compra de Tickets</a>
+    </li>-->
+
+                    <li class="nav-item avatar dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+
+                            <i class="fa fa-users"></i>
+                            <span @(Request.IsAuthenticated ? @User.Identity.GetUserName() : "Mi cuenta")></span>
+
+                        </a>
+
+
+                        @if (Request.IsAuthenticated)
+                        {
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li>
+
+                                    <form action="~/account/logoff" method="post" id="logoutForm">
+                                        @Html.AntiForgeryToken()
+                                        <a href="javascript:document.getElementById('logoutForm').submit()">Cerrar Sesión</a>
+                                    </form>
+                                </li>
+
+                            </ul>
+
+                        }
+                        else
+                        {
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="~/Account/login"></a>Iniciar sesion</li>
+                        <li><a href="~/Account/Register"></a>registrate</li>
+
+                    </ul>
+                        }
+                        
                     </li>
 
                 </ul>
