@@ -20,9 +20,12 @@
 }
 
 #agrandar input{
-    width:550px;
+    width:500px;
     right:950px;
 }
+
+
+
 
 #micolor a{
  
@@ -146,6 +149,7 @@
         display: none;
     }
 }
+
 
 
 

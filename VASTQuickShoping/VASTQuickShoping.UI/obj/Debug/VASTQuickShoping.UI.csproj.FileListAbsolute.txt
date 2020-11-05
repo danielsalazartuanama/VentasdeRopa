@@ -664,3 +664,4 @@ C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.U
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\obj\Debug\VASTQuickShoping.UI.csproj.CopyComplete
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\obj\Debug\VASTQuickShoping.UI.dll
 C:\Users\kenyi\Documents\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\obj\Debug\VASTQuickShoping.UI.pdb
+C:\Users\jhony\OneDrive\Documentos\GitHub\VentasdeRopa\VASTQuickShoping\VASTQuickShoping.UI\bin\AES.pdb
