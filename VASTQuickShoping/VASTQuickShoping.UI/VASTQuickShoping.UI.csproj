@@ -173,6 +173,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdministratorController.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
@@ -212,6 +213,14 @@
     <Content Include="Assets\images\a1.jpg" />
     <Content Include="Assets\images\a2.jpg" />
     <Content Include="Assets\images\a3.jpg" />
+    <Content Include="Assets\images\admin\categori.jpg" />
+    <Content Include="Assets\images\admin\genero.jpg" />
+    <Content Include="Assets\images\admin\ico1.png" />
+    <Content Include="Assets\images\admin\produ.jpg" />
+    <Content Include="Assets\images\admin\proveedores.jpg" />
+    <Content Include="Assets\images\admin\proveeedor.jfif" />
+    <Content Include="Assets\images\admin\roles.png" />
+    <Content Include="Assets\images\admin\users.jpg" />
     <Content Include="Assets\images\bann1.jpg" />
     <Content Include="Assets\images\bann2.jpg" />
     <Content Include="Assets\images\bann3.jpg" />
@@ -316,6 +325,7 @@
     <Content Include="Assets\images\pt6.jpg" />
     <Content Include="Assets\images\pt7.jpg" />
     <Content Include="Assets\images\pt8.jpg" />
+    <Content Include="Assets\images\admin\tallas.png" />
     <Content Include="Assets\js\app.js" />
     <Content Include="Assets\js\bootstrap.js" />
     <Content Include="Assets\js\creditly.js" />
@@ -407,6 +417,7 @@
     <Content Include="Areas\Admin\Views\RolesAdmin\Details.cshtml" />
     <Content Include="Areas\Admin\Views\RolesAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\RolesAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Administrator\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

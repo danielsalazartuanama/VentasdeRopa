@@ -11,8 +11,8 @@
     color:white;
 }
 
-#header img{
-    width:55px;
+#header img {
+    width: 40px;
 }
 #font a{
    
@@ -20,8 +20,13 @@
 }
 
 #agrandar input{
-    width:550px;
-    right:950px;
+    width:450px;
+    right:850px;
+   
+}
+
+nav{
+    background-color:blue;
 }
 
 #micolor a{
