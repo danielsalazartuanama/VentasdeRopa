@@ -55,6 +55,68 @@ namespace VASTQuickShoping.Manager.Contracts
             }
         }
 
+
+
+
+        public int Delete(int id)
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                Product obj = context.Products.Find(id);
+                context.Entry(obj).State = EntityState.Deleted;
+                return context.SaveChanges();
+            }
+        }
+
+        public IEnumerable<ProductDTO> GetAllDTOPaged(int currentPage, int pageSize, bool status)
+        {
+            using (var context = new ApplicationDbContext())
+            {
+
+                var lista = context.Products
+                    .Where(k => k.State == status)
+                    .Select(k => new ProductDTO
+                    {
+                        ProductID = k.ProductID,
+                        Name = k.Name,
+                        Description = k.Description,
+                        SKU = k.SKU,
+                        SalePrice = k.SalePrice,
+                        Stock = k.Stock,
+                        Discount = k.Discount,
+                        Category = k.Category.Name,
+                        Brand = k.Brand.Name,
+                        Size = k.Size.Name,
+                        Department = k.Department.Name,
+                        Provider = k.Provider.Name
+                    })
+                    .OrderByDescending(K=>K.ProductID)
+                    .Skip((currentPage - 1)* pageSize)
+                    .Take(pageSize)
+                    .ToList();
+                return lista;
+            }
+        }
+
+        public int GedCount( bool status)
+        {
+            //consulta linquiu
+            using (var context = new ApplicationDbContext())
+            {
+                return context.Products
+                    .Include("Category")
+                    .Include("Brand")
+                      .Where(k => k.State == status)
+                    .Count();
+            }
+        }
+
+
+
+
+
+
+
         public Product Get(int id)
         {
             using (var context = new ApplicationDbContext())
@@ -82,15 +144,6 @@ namespace VASTQuickShoping.Manager.Contracts
             }
         }
 
-        public int Delete(int id)
-        {
-            using (var context = new ApplicationDbContext())
-            {
-                Product obj = context.Products.Find(id);
-                context.Entry(obj).State = EntityState.Deleted;
-                return context.SaveChanges();
-            }
-        }
-
+       
     }
 }

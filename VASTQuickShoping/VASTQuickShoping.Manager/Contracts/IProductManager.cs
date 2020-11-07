@@ -12,5 +12,9 @@ namespace VASTQuickShoping.Manager.Contracts
     {
         //Funcionalidades especificas
         IEnumerable<ProductDTO> GetAllDTO(bool status);
+
+        IEnumerable<ProductDTO> GetAllDTOPaged(int currentPage, int pageSize, bool status);
+
+        int GedCount(bool status);
     }
 }

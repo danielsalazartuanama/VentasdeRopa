@@ -210,7 +210,7 @@
                 <li class="nav-item active">
                     <a class="nav-link text-dark font-weight-bold" href="#">FONOCOMPRAS</a>
                 </li>
-                @if (User.IsInRole("Admin"))
+                @if (User.IsInRole("Admin")|| User.IsInRole("Almacenero") || User.IsInRole("Vendedor"))
                 {
                     <li class="nav-item active">
                         <a class="nav-link text-dark font-weight-bold" href="~/Admin/Administrator">Administrar</a>

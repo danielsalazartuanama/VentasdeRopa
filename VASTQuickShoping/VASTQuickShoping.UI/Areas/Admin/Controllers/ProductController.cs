@@ -5,21 +5,49 @@ using System.Web.Mvc;
 using VASTQuickShoping.Manager;
 using VASTQuickShoping.Manager.Contracts;
 using VASTQuickShoping.Models.Domain;
+using VASTQuickShoping.UI.Areas.Admin.ViewModels;
 using VASTQuickShoping.UI.Common;
 
 namespace VASTQuickShoping.UI.Areas.Admin.Controllers
 {
     public class ProductController : Controller
     {
+        [Authorize(Roles = "Admin,Almacenero,Vendedor")]
         // GET: Admin/Product
-        public ActionResult Index(bool state = true)
+       
+
+        public ActionResult Index(int? currentPage, int pageSize=5, bool state=true)
         {
+
+
             ViewBag.state = state;
-            var data = new ProductManager().GetAllDTO(state);
-            return View(data);
+            int totalItems = new ProductManager().GedCount(state);
+
+            var pagination = new Pagination(totalItems, currentPage, pageSize);
+
+            var listaPaginada = new ProductManager().GetAllDTOPaged(pagination.CurrentPage, pagination.PageSize, state);
+
+            var productPaginationVM = new ProductPaginationVM
+            {
+                Pagination = pagination,
+                productsDTOMV = listaPaginada
+            };
+
+            ViewBag.pageSize = pageSize;
+
+            return View(productPaginationVM);
         }
 
+        //public ActionResult Index(bool state = true)
+        //{
+
+
+        //    ViewBag.state = state;
+        //    var data = new ProductManager().GetAllDTO(state);
+        //    return View(data);
+        //}
         [HttpGet]
+        [Authorize(Roles = "Admin,Almacenero")]
         public ActionResult Insertar()
         {
             ViewBag.op = CRUD.Insertar.ToString();
@@ -33,6 +61,7 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin,Almacenero")]
         public ActionResult Insertar(Product obj, HttpPostedFileBase[] fileImagen)
         {
             
@@ -68,6 +97,7 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
         }
 
         [HttpGet]
+       [Authorize(Roles = "Admin,Almacenero")]
         public ActionResult Modificar(int id)
         {
             
@@ -80,6 +110,7 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
             return View("Formulario", new ProductManager().Get(id));//un objeto categorua para que el objeto no quede nulo
         }
         [HttpPost]
+       [Authorize(Roles = "Admin,Almacenero")]
         public ActionResult Modificar(Product obj)
         {
             
@@ -101,7 +132,7 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
         }
 
         [HttpGet]
-
+       [Authorize(Roles = "Admin,Almacenero")]
         public ActionResult Eliminar(int id)
         {
             _ = new ProductManager().Delete(id);

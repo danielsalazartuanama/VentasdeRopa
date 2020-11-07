@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace VASTQuickShoping.UI.Areas.Admin.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class AdministratorController : Controller
     {
         // GET: Admin/Administrator

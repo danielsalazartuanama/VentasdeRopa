@@ -184,7 +184,9 @@
     <Compile Include="Areas\Admin\Controllers\SizeController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersAdminController.cs" />
     <Compile Include="Areas\Admin\ViewModels\AdminViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\ProductPaginationVM.cs" />
     <Compile Include="Common\MisConstantes.cs" />
+    <Compile Include="Common\Pagination.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
