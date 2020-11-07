@@ -4,33 +4,60 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="text-danger">CREAR ROLES</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-sm-3">
+
+                <a href="~/Admin/RolesAdmin/Create" class="btn btn-info btn-block my-4">Crear </a>
+            </div>
+
+        </div>
+
+    </div>
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
+<div class="container">
+    <table class="table table-stripe table-hover">
+        <thead style=" background-color: #3e4353" class="#">
+            <tr>
 
-        </th>
-    </tr>
+                <th style="width:50%; color:white;">
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
-    }
+                <th style="width:30%">
 
-</table>
+                </th>
+
+            </tr>
+
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+
+
+
+                <td>
+
+                    <a href="~/Admin/rolesadmin/Edit/@item.Id"><img src="https://img.icons8.com/cute-clipart/35/000000/pencil.png" /></a>
+                    <a href="~/Admin/rolesadmin/Details/@item.Id"><img src="https://img.icons8.com/cute-clipart/35/000000/book.png" /></a>
+                    <a href="~/Admin/rolesadmin/Delete/@item.Id"onclick="return confirm('¿Estas seguro de eliminar este registro?')"> <img src="https://img.icons8.com/fluent/35/000000/trash.png" /></a>
+
+                </td>
+            </tr>
+        }
+
+
+    </table>
+</div>
+
+
+
+
