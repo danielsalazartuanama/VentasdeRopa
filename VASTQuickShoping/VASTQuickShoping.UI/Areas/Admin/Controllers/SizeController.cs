@@ -9,6 +9,7 @@ using VASTQuickShoping.UI.Common;
 
 namespace VASTQuickShoping.UI.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Gerente")]
     public class SizeController : Controller
     {
         // GET: Admin/Size

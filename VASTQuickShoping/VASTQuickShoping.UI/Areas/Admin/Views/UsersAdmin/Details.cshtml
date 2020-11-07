@@ -4,13 +4,13 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details.</h2>
+<h2>DETALLES</h2>
 
 <div>
-    <h4>User</h4>
+    <h4>USUARIO</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        <dt style="color:red">
             @Html.DisplayNameFor(model => model.UserName)
         </dt>
         <dd>
@@ -18,8 +18,8 @@
         </dd>
     </dl>
 </div>
-<div class="container  bg-danger">
-    <h4>List of roles for this user</h4>
+<div class="container ">
+    <h4 style="color:red">Lista de roles de usuario</h4>
     @if (ViewBag.RoleNames.Count == 0)
     {
         <hr />
@@ -27,62 +27,35 @@
     }
 </div>
 
-<table class=" table table-stripe table-hover">
+<div class="container card">
+    <div class="row justify-content-center">
+        <div class="col-sm-8">
 
-    @foreach (var item in ViewBag.RoleNames)
-    {
-        <tr>
-            <td>
-                @item
-            </td>
-        </tr>
-    }
+            <table class=" table table-stripe table-hover">
 
-</table>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                @foreach (var item in ViewBag.RoleNames)
+                {
+                    <tr>
+                        <td>
+                            @item
+                        </td>
+                    </tr>
+                }
 
-
+            </table>
 
 
+            <p>
+                <a href="~/Admin/usersadmin/Edit/@Model.Id"><img src="https://img.icons8.com/cute-clipart/35/000000/pencil.png" /></a>
+                <a href="~/Admin/usersadmin/Index/"><img src="https://img.icons8.com/cute-clipart/35/000000/return.png" /></a>
 
-
-<div class="row">
-    <div class="col-sm-4">
-        <a class="btn btn-danger form-control" href="~/admin/category/insertar">Nuevo</a>
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-12">
-        <table class="table table-stripe table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th style="width:40%;">NOMBRE</th>
-                    <th style="width: 50%;">DESCRIPCION</th>
-                    <th style="width: 10%;"></th>
-
-
-                </tr>
-            </thead>
-            <tbody>
-               
-            </tbody>
-        </table>
+            </p>
+        </div>
     </div>
 </div>
 
-<br />
 
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-        @(ViewBag.state == true ? "Activo":"Inactivo")
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
-        <a class="dropdown-item" href="~/admin/category/index?state=true">Activo</a>
-        <a class="dropdown-item" href="~/admin/category/index?state=false">Inactivo</a>
 
-    </div>
-</div>
+
+
+

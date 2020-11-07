@@ -210,7 +210,7 @@
                 <li class="nav-item active">
                     <a class="nav-link text-dark font-weight-bold" href="#">FONOCOMPRAS</a>
                 </li>
-                @if (User.IsInRole("Admin")|| User.IsInRole("Almacenero") || User.IsInRole("Vendedor"))
+                @if (User.IsInRole("Admin")|| User.IsInRole("Contador") || User.IsInRole("Gerente")|| User.IsInRole("Vendedor"))
                 {
                     <li class="nav-item active">
                         <a class="nav-link text-dark font-weight-bold" href="~/Admin/Administrator">Administrar</a>
@@ -258,7 +258,7 @@
                     <a href="#">Privacidad</a>
                 </div>
                 <div class="col-12 col-lg">
-                    <a href="#">Provacidad</a>
+                    <a href="#">Informes</a>
                 </div>
             </div>
         </div>

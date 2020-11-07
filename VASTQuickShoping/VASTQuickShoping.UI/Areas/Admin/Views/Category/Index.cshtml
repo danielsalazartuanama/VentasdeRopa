@@ -8,16 +8,27 @@
 <center>
     <h2>Categoria</h2>
 </center>
+<br />
+<div class="container">
+    <div class="row ">
+        <div class="col-sm-2">
 
-<div class="row">
-    <div class="col-sm-4">
-        <a class="btn btn-danger form-control" href="~/admin/category/insertar">Nuevo</a>
+        </div>
+        <div class="col-sm-7">
+
+        </div>  
+        <div class="col-sm-3  ">
+            <a  class="btn  form-control" style="background-color:#b0b7e9" href="~/admin/category/insertar">Nuevo</a>
+        </div>
     </div>
+  
 </div>
-<div class="row">
+<br />
+
+<div class="container">
     <div class="col-sm-12">
         <table class="table table-stripe table-hover">
-            <thead class="thead-dark">
+            <thead style="background-color:#f3c6cd"  class="·">
                 <tr>
                     <th style="width:40%;">NOMBRE</th>
                     <th style="width: 50%;">DESCRIPCION</th>
@@ -33,13 +44,11 @@
                         <td>@item.Name</td>
                         <td>@item.Descripcion</td>
                         <td>
-                            <a href="~/admin/category/modificar/@item.CategoryID" class="btn btn-sm btn-primary">
-                                <img src="https://img.icons8.com/carbon-copy/30/000000/pencil.png" />
-                            </a>
-                            <a href="~/admin/category/eliminar/@item.CategoryID" class="btn btn-sm btn-success" onclick="return confirm('¿Estas seguro de eliminar este registro?')">
-                                <img src="https://img.icons8.com/wired/30/000000/trash.png" />
 
-                            </a>
+                            <a href="~/admin/category/modificar/@item.CategoryID"><img src="https://img.icons8.com/cute-clipart/35/000000/pencil.png" /></a>
+                            <a href="~/admin/category/eliminar/@item.CategoryID" onclick="return confirm('¿Estas seguro de eliminar este registro?')"> <img src="https://img.icons8.com/fluent/35/000000/trash.png" /></a>
+
+
                         </td>
 
                     </tr>
@@ -51,7 +60,9 @@
 
 <br />
 
-<div class="dropdown">
+
+<div class="dropdown offset-8
+     ">
     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
         @(ViewBag.state == true ? "Activo":"Inactivo")

@@ -10,6 +10,7 @@ using VASTQuickShoping.UI.Common;
 
 namespace VASTQuickShoping.UI.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Gerente")]
     public class CategoryController : Controller
     {
         // GET: Admin/Category
@@ -20,6 +21,7 @@ namespace VASTQuickShoping.UI.Areas.Admin.Controllers
         }
 
         [HttpGet]
+       
         public ActionResult Insertar()
         {
             ViewBag.op =CRUD.Insertar.ToString();

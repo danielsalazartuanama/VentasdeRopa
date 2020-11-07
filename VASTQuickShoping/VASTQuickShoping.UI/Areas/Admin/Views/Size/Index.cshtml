@@ -9,43 +9,63 @@
 </center>
 
 
+<br />
 
-<div class="row">
-    <div class="col-sm-4">
-        <a class="btn btn-danger form-control" href="~/admin/size/insertar">Nuevo</a>
+
+<div class="container">
+    <div class="row ">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-7">
+
+        </div>
+        <div class="col-sm-3  ">
+            <a class="btn btn-danger form-control" href="~/admin/size/insertar">Nuevo</a>
+        </div>
     </div>
+
 </div>
-<div class="row">
-    <div class="col-sm-12">
-        <table class="table table-stripe table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th style="width:30%;">Nombre de la Talla</th>
-                    <th style="width: 70%;"></th>
-
-
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)//item es un objeto por eso lo pongo @item categoria
-                {
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-stripe table-hover">
+                <thead style="background-color:#f3c6cd" class="#">
                     <tr>
-                        <td>@item.Name</td>
-                        <td>
-                            <a href="~/admin/size/modificar/@item.SizeID" class="btn btn-sm btn-primary">
-                                <img src="https://img.icons8.com/carbon-copy/30/000000/pencil.png" />
-                            </a>
-                            <a href="~/admin/size/eliminar/@item.SizeID" class="btn btn-sm btn-success">
-                                <span class="glyphicon glyphicon-pencil" aria-hidden="true" onclick="return confirm('¿Estas seguro de eliminar este registro?')"></span><img src="https://img.icons8.com/wired/30/000000/trash.png" />
-                            </a>
-                        </td>
+                        <th style="width:30%;">Nombre de la Talla</th>
+                        <th style="width: 70%;"></th>
+
 
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)//item es un objeto por eso lo pongo @item categoria
+                    {
+                        <tr>
+
+
+                            <td>@item.Name</td>
+                            <td>
+
+                                <div class="offset-9">
+                                    <a href="~/admin/size/modificar/@item.SizeID"><img src="https://img.icons8.com/cute-clipart/35/000000/pencil.png" /></a>
+
+                                    <a href="~/admin/size/eliminar/@item.SizeID" onclick="return confirm('¿Estas seguro de eliminar este registro?')"> <img src="https://img.icons8.com/fluent/35/000000/trash.png" /></a>
+                                </div>
+
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
+
+
+
 
 
 <br />
