@@ -209,6 +209,7 @@
     <Content Include="Assets\css\flexslider.css" />
     <Content Include="Assets\css\fontawesome-all.min.css" />
     <Content Include="Assets\css\jquery-ui1.css" />
+    <Content Include="Assets\css\modal.css" />
     <Content Include="Assets\css\owl.carousel.min.css" />
     <Content Include="Assets\css\shop.css" />
     <Content Include="Assets\css\style.css" />
@@ -339,6 +340,7 @@
     <Content Include="Assets\js\jquery-ui.js" />
     <Content Include="Assets\js\jquery.flexslider.js" />
     <Content Include="Assets\js\minicart.js" />
+    <Content Include="Assets\js\modal.js" />
     <Content Include="Assets\js\move-top.js" />
     <Content Include="Assets\js\owl.carousel.js" />
     <Content Include="Assets\js\Product\imageProduct.js" />
